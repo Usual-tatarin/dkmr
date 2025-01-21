@@ -1,5 +1,6 @@
 from django.http import HttpResponse
-
-
+from django.template.loader import render_to_string
+from django.shortcuts import render
 def index(request):
-    return HttpResponse("Страница приложения Дорожная карта молодых родителей")
+    t = render_to_string('index.html')
+    return HttpResponse(t)
