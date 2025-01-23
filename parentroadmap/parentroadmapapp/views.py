@@ -11,7 +11,7 @@ def index(request):
 
 
 def prepregnancy(request):
-    return render(request, 'parentroadmapapp/prepregnancy.html', {'title': '{Хочу стать родителем}'})
+    return render(request, 'parentroadmapapp/prepregnancy.html', {'title': 'Хочу стать родителем'})
 
 
 def pregnancy(request):
