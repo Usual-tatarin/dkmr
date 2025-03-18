@@ -6,9 +6,10 @@ menu = [{'title': "Главная страница", 'url_name': 'home'},
         {'title': "Я родитель", 'url_name': 'parenting'}
         ]
 
+steps = [1, 2, 3, 4, 5]
 
 def index(request):
-    return render(request, 'parentroadmapapp/index.html', {'title': 'Главная страница', 'menu': menu})
+    return render(request, 'parentroadmapapp/index.html',  {'title': 'Главная страница', 'menu': menu, 'steps': steps})
 
 
 def prepregnancy(request):

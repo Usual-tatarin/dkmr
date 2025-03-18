@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
-<p >{{ menu|join:" | " }}</p>
 {% block content %}
-<h1>{{title}}</h1>
+    <div class="steps-container">
+        <!-- Цикл for для генерации шагов -->
+        {% for step in steps %}
+        <div class="step">
+            <div class="circle">{{ step }}</div>
+        </div>
+        {% endfor %}
+    </div>
 {% endblock %}
