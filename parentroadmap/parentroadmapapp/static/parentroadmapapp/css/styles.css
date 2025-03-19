@@ -5,6 +5,7 @@ html, body {
 	height: 100%;
 	width: 100%;
 	color: #444;
+
 }
 
 .header {
@@ -45,3 +46,40 @@ ul.mainmenu li a:hover {
 /*ul.mainmenu li.last {float: right;}*/
 
 .clear {clear: both;}
+
+/*Левое меню*/
+
+.steps-container {
+    position: relative;
+    width: 2px; /* Ширина линии */
+    height: 400px; /* Высота контейнера */
+    background-color: #093c69; /* Цвет линии */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 2%;
+    opacity: 0.7; /* Полупрозрачность */
+}
+
+.step {
+    position: relative;
+    width: 100%;
+    height: 20%; /* Каждый шаг занимает 20% высоты контейнера */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    position: absolute;
+    left: -15px; /* Смещение влево для центрирования */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #0575b1; /* Цвет круга */
+    color: white;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
