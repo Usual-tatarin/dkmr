@@ -18,12 +18,12 @@ def index(request):
 
 
 def prepregnancy(request):
-    return render(request, 'parentroadmapapp/prepregnancy.html', {'title': 'Хочу стать родителем', 'menu': menu})
+    return render(request, 'parentroadmapapp/prepregnancy.html', {'title': 'Хочу стать родителем', 'menu': menu, 'menu_items': menu_items})
 
 
 def pregnancy(request):
-    return render(request, 'parentroadmapapp/pregnancy.html', {'title': 'Ведение беременности', 'menu': menu})
+    return render(request, 'parentroadmapapp/pregnancy.html', {'title': 'Ведение беременности', 'menu': menu, 'menu_items': menu_items})
 
 
 def parenting(request):
-    return render(request, 'parentroadmapapp/parenting.html', {'title': 'Я родитель', 'menu': menu})
+    return render(request, 'parentroadmapapp/parenting.html', {'title': 'Я родитель', 'menu': menu, 'menu_items': menu_items})

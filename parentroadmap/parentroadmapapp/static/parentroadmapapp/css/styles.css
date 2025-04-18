@@ -50,11 +50,7 @@ ul.mainmenu li a:hover {
 /* Стилизация контейнера меню */
 .menu-container {
     width: 200px; /* Ширина меню */
-    background-color: #f4f4f4; /* Цвет фона */
-    border: 1px solid #ccc; /* Граница */
-    border-radius: 8px; /* Скругление углов */
     padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
 }
 
 /* Стилизация списка */
