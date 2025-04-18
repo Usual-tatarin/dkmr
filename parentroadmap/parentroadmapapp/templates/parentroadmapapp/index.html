@@ -1,11 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="steps-container">
-        <!-- Цикл for для генерации шагов -->
-        {% for step in steps %}
-        <div class="step">
-            <div class="circle">{{ step }}</div>
-        </div>
-        {% endfor %}
+    <div class="menu-container">
+        <ul class="vertical-menu">
+            {% for item in menu_items %}
+                <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+            {% endfor %}
+        </ul>
     </div>
 {% endblock %}

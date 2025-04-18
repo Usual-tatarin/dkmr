@@ -47,39 +47,42 @@ ul.mainmenu li a:hover {
 
 .clear {clear: both;}
 
-/*Левое меню*/
-
-.steps-container {
-    position: relative;
-    width: 2px; /* Ширина линии */
-    height: 400px; /* Высота контейнера */
-    background-color: #093c69; /* Цвет линии */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 2%;
-    opacity: 0.7; /* Полупрозрачность */
+/* Стилизация контейнера меню */
+.menu-container {
+    width: 200px; /* Ширина меню */
+    background-color: #f4f4f4; /* Цвет фона */
+    border: 1px solid #ccc; /* Граница */
+    border-radius: 8px; /* Скругление углов */
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
 }
 
-.step {
-    position: relative;
-    width: 100%;
-    height: 20%; /* Каждый шаг занимает 20% высоты контейнера */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Стилизация списка */
+.vertical-menu {
+    list-style-type: none; /* Убираем маркеры */
+    padding: 0;
+    margin: 0;
 }
 
-.circle {
-    position: absolute;
-    left: -15px; /* Смещение влево для центрирования */
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #0575b1; /* Цвет круга */
-    color: white;
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Стилизация пунктов меню */
+.vertical-menu li {
+    margin-bottom: 5px; /* Отступ между пунктами */
+}
+
+/* Стилизация ссылок */
+.vertical-menu a {
+    display: block;
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #333; /* Цвет текста */
+    padding: 10px;
+    background-color: #fff; /* Цвет фона ссылки */
+    border: 1px solid #ddd; /* Граница */
+    border-radius: 4px; /* Скругление углов */
+    transition: background-color 0.3s ease; /* Плавный переход при наведении */
+}
+
+/* Эффект при наведении */
+.vertical-menu a:hover {
+    background-color: #007bff; /* Цвет фона при наведении */
+    color: #fff; /* Цвет текста при наведении */
 }
