@@ -7,7 +7,7 @@ menu = [{'title': "Главная страница", 'url_name': 'home'},
         ]
 
 menu_items = [
-    {'title': 'Главная', 'url': '/'},
+    {'title': 'Очень длинный текст, который не помещается в одну строку', 'url': '/'},
     {'title': 'О нас', 'url': '/about/'},
     {'title': 'Контакты', 'url': '/contacts/'},
     {'title': 'Блог', 'url': '/blog/'},
