@@ -1,21 +1,10 @@
 from django.shortcuts import render
-from .models import Prepregnancy
+from .models import Prepregnancy, Menu
 
-menu = [{'title': "Главная страница", 'url_name': 'home'},
-        {'title': "Хочу стать родителем", 'url_name': 'prepregnancy'},
-        {'title': "Ведение беременности", 'url_name': 'pregnancy'},
-        {'title': "Я родитель", 'url_name': 'parenting'}
-        ]
 
-# menu_items = [
-#    {'title': 'Очень длинный текст, который не помещается в одну строку', 'url': '/'},
-#    {'title': 'О нас', 'url': '/about/'},
-#    {'title': 'Контакты', 'url': '/contacts/'},
-#    {'title': 'Блог', 'url': '/blog/'},
-# ]
 
-menu_items = Prepregnancy.objects.values('title', 'url')
-
+menu_items = Prepregnancy.objects.values('title', 'slug')
+menu = Menu.objects.values('title', 'slug')
 
 def index(request):
     return render(request, 'parentroadmapapp/index.html',  {'title': 'Главная страница', 'menu': menu, 'menu_items': menu_items})
