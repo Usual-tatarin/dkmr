@@ -10,5 +10,11 @@ class Prepregnancy(models.Model):
     slug = models.SlugField(unique=True, null=True, blank=True)
     content = models.TextField(blank=True)
     is_published = models.BooleanField(default=True)
+    menu = models.ForeignKey(
+        Menu,  # Связь с моделью Category
+        on_delete=models.CASCADE,  # При удалении категории удаляются все связанные статьи
+        related_name='menu',  # Имя для обратной связи
+        null=True
+    )
 
     objects = models.Manager()
