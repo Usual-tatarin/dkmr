@@ -16,7 +16,7 @@
 			<!--<li class="logo"><a href="{% url 'home' %}"><div class="logo"></div></a></li>-->
 {% for m in menu %}
 	{% if not forloop.last %}<li>{% else %}<li class="last">{% endif %}
-		<a href="{% url m.slug %}">{{m.title}}</a></li>
+		<a href="/{{ m.url }}">{{m.title}}</a></li>
 {% endfor %}
 			</ul>
 			<div class="clear"></div>

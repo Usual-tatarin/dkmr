@@ -2,8 +2,13 @@ from django.db import models
 
 class Menu(models.Model):
     title = models.CharField(max_length=255)
-    slug = models.SlugField(unique=True, null=True, blank=True)
+    url = models.CharField(max_length=200, null=True, blank=True, verbose_name='URL')
     objects = models.Manager()
+
+    def save(self, *args, **kwargs):
+        if self.title.lower() == 'главная страница' and not self.url:
+            self.url = '/'  # Для главной страницы URL равен '/'
+        super().save(*args, **kwargs)
 
 class Prepregnancy(models.Model):
     title = models.CharField(max_length=255)

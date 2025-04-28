@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Prepregnancy, Menu
 
 menu_items = Prepregnancy.objects.values('title', 'slug')
-menu = Menu.objects.values('title', 'slug')
+menu = Menu.objects.values('title', 'url')
 
 
 def index(request):
