@@ -10,7 +10,7 @@ def index(request):
                   {'title': 'Главная страница', 'menu': menu, 'menu_items': menu_items})
 
 
-def prepregnancy(request):
+def prepregnancy(request, slug):
     return render(request, 'parentroadmapapp/prepregnancy.html',
                   {'title': 'Хочу стать родителем', 'menu': menu, 'menu_items': menu_items})
 

@@ -24,6 +24,21 @@
 {% endblock mainmenu %}
 
 
+<div class="menu-container">
+    <ul class="vertical-menu">
+        {% if menu_items %}
+        <ul>
+            {% for item in menu_items %}
+                <li><a href="{% url 'prepregnancy' slug=item.slug %}">{{ item.title }}</a></li>
+            {% endfor %}
+        </ul>
+            {% else %}
+                <p>Нет доступных записей.</p>
+            {% endif %}
+    </ul>
+</div>
+
+
 {% block content %}
 
 {% endblock %}
