@@ -10,7 +10,7 @@ def index(request):
                   {'title': 'Главная страница', 'menu': menu, 'menu_items': menu_items})
 
 
-def prepregnancy(request, slug):
+def prepregnancy(request):
     return render(request, 'parentroadmapapp/prepregnancy.html',
                   {'title': 'Хочу стать родителем', 'menu': menu, 'menu_items': menu_items})
 
@@ -23,3 +23,8 @@ def pregnancy(request):
 def parenting(request):
     return render(request, 'parentroadmapapp/parenting.html',
                   {'title': 'Я родитель', 'menu': menu, 'menu_items': menu_items})
+
+
+def post(request, slug):
+    return render(request, 'parentroadmapapp/post.html',
+                  {'title': 'Статья', 'menu': menu, 'menu_items': menu_items})
