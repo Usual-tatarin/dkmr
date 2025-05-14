@@ -5,7 +5,7 @@ html, body {
 	height: 100%;
 	width: 100%;
 	color: #444;
-
+	background-color: #fafafc;
 }
 
 .header {
@@ -49,32 +49,41 @@ ul.mainmenu li a:hover {
 
 /* Стилизация контейнера меню */
 .menu-container {
-    width: 200px; /* Ширина меню */
-    padding: 10px;
+    width: 200px;
+    height: auto;
+    position: fixed;
+    top: 70px;
+    left: 20px;
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
 }
 
 /* Стилизация списка */
 .vertical-menu {
-    list-style-type: none; /* Убираем маркеры */
-    padding: 0;
     margin: 0;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
 }
 
 /* Стилизация пунктов меню */
-.vertical-menu li {
-    margin-bottom: 5px; /* Отступ между пунктами */
+.vertical-menu li a {
+     display: flex;
+     align-items: center;
+     padding: 15px 20px;
+     color: #333;
+     text-decoration: none;
+     transition: background 0.2s ease;
 }
-
-/* Стилизация ссылок */
-.vertical-menu a {
-    display: block;
-    text-decoration: none; /* Убираем подчеркивание */
-    color: #333; /* Цвет текста */
-    padding: 10px;
-    background-color: #fff; /* Цвет фона ссылки */
-    border: 1px solid #ddd; /* Граница */
-    border-radius: 4px; /* Скругление углов */
-    transition: background-color 0.3s ease; /* Плавный переход при наведении */
+/* Убираем маркеры пунктов меню */
+.vertical-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Эффект при наведении */
