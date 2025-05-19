@@ -20,6 +20,7 @@ ul.mainmenu {
 	height: 60px;
 	color: #fdc073;
 	font-size: 20px;
+	margin-left: 200px;
 	overflow: hidden;
 }
 ul.mainmenu li {
@@ -54,12 +55,13 @@ ul.mainmenu li a:hover {
     position: fixed;
     top: 70px;
     left: 20px;
-    background-color: #ffffff;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    border-radius: 6px;
+    background-color: #fafafc;
+    /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); */
+    /* border-radius: 6px; */
     display: flex;
     flex-direction: column;
     transition: all 0.3s ease;
+    border-right: 1px solid #eee
 }
 
 /* Стилизация списка */
@@ -67,7 +69,7 @@ ul.mainmenu li a:hover {
     margin: 0;
     padding: 20px;
     text-align: center;
-    border-bottom: 1px solid #eee;
+    /* border-bottom: 1px solid #eee; */
 }
 
 /* Стилизация пунктов меню */
