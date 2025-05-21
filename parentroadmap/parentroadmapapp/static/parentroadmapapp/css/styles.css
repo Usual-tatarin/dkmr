@@ -9,7 +9,7 @@ html, body {
 }
 
 .header {
-	background: #3F4137;
+	background: #fafafc;
 	height: 60px;
 }
 
@@ -18,24 +18,28 @@ ul.mainmenu {
 	margin: 0;
 	padding: 0;
 	height: 60px;
-	color: #fdc073;
+	color: #000000;
 	font-size: 20px;
-	margin-left: 200px;
+	margin-left: 230px;
 	overflow: hidden;
+    border-bottom: 1px solid #eee
 }
 ul.mainmenu li {
 	float: left;
 	margin: 18px 40px 0 30px;
+
 }
 ul.mainmenu li.logo {margin: 0;}
 /*ul.mainmenu li.last {float: right;}*/
 
 ul.mainmenu li a {
-	color: #fdc073;
+	color: #000000;
 	text-decoration: none;
+
 }
 ul.mainmenu li a:hover {
-	color: #FDA83D;
+	background-color: #007bff; /* Цвет фона при наведении */
+    color: #fff; /* Цвет текста при наведении */
 }
 
 .logo {
