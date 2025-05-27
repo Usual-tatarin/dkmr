@@ -1,9 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Prepregnancy, Pregnancy, Parenting, Menu
 
-menu_items_prepregnancy = Prepregnancy.objects.values('title', 'slug')
-menu_items_pregnancy = Pregnancy.objects.values('title', 'slug')
-menu_items_parenting = Parenting.objects.values('title', 'slug')
+menu_items_prepregnancy = Prepregnancy.objects.values('title', 'slug', 'content')
+menu_items_pregnancy = Pregnancy.objects.values('title', 'slug', 'content')
+menu_items_parenting = Parenting.objects.values('title', 'slug', 'content')
 menu = Menu.objects.values('title', 'url')
 
 
@@ -28,5 +28,19 @@ def parenting(request):
 
 
 def post(request, slug):
+    item = None
+
+    for model in [Prepregnancy, Pregnancy, Parenting]:
+        try:
+            item = model.objects.get(slug=slug)
+            break  # Если нашли, выходим из цикла
+        except model.DoesNotExist:
+            continue
+
+    if item is None:
+        # Если ни в одной модели не найдено — 404
+        from django.http import Http404
+        raise Http404("Пост не найден")
+
     return render(request, 'parentroadmapapp/post.html',
-                  {'title': 'Статья', 'menu': menu})
+                  {'title': 'Статья', 'menu': menu, 'item': item})
