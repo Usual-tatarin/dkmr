@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link type="text/css" href="{% static 'parentroadmapapp/css/styles.css' %}" rel="stylesheet" />
+</head>
+<body>
+<tr><td valign=top>
+
+{% block mainmenu %}
+		<div class="header">
+			<ul id="mainmenu" class="mainmenu">
+			<!--<li class="logo"><a href="{% url 'home' %}"><div class="logo"></div></a></li>-->
+{% for m in menu %}
+	{% if not forloop.last %}<li>{% else %}<li class="last">{% endif %}
+		<a href="/{{ m.url }}">{{m.title}}</a></li>
+{% endfor %}
+			</ul>
+			<div class="clear"></div>
+		</div>
+{% endblock mainmenu %}
+
+
+<div align="center">
+{% block content %}
+{% endblock %}
+</div>
+</body>
+</html>
