@@ -1,5 +1,5 @@
 from django.db import models
-
+from ckeditor.fields import RichTextField
 
 class Menu(models.Model):
     title = models.CharField(max_length=255)
@@ -15,7 +15,7 @@ class Menu(models.Model):
 class Prepregnancy(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField(unique=True, null=True, blank=True)
-    content = models.TextField(blank=True)
+    content = RichTextField()
     is_published = models.BooleanField(default=True)
     menu = models.ForeignKey(
         Menu,  # Связь с моделью Category
@@ -30,7 +30,7 @@ class Prepregnancy(models.Model):
 class Pregnancy(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField(unique=True, null=True, blank=True)
-    content = models.TextField(blank=True)
+    content = RichTextField()
     is_published = models.BooleanField(default=True)
     menu = models.ForeignKey(
         Menu,  # Связь с моделью Category
@@ -45,7 +45,7 @@ class Pregnancy(models.Model):
 class Parenting(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField(unique=True, null=True, blank=True)
-    content = models.TextField(blank=True)
+    content = RichTextField()
     is_published = models.BooleanField(default=True)
     menu = models.ForeignKey(
         Menu,  # Связь с моделью Category

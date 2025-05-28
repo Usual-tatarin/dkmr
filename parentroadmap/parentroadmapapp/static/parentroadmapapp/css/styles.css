@@ -97,3 +97,20 @@ ul.mainmenu li a:hover {
     background-color: #007bff; /* Цвет фона при наведении */
     color: #fff; /* Цвет текста при наведении */
 }
+
+.post-container {
+    width: 50vw;
+    height: auto;
+    position: static;
+    padding: 8px;
+    top: 15%;
+    left: 20%;
+    background-color: #FFFFFF;
+    text-align: justify;
+    /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    border: 1px solid #eee
+}
