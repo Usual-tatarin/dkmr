@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.postgres',
     'parentroadmapapp.apps.ParentroadmapappConfig',
     'ckeditor',
     'ckeditor_uploader',
@@ -81,8 +82,12 @@ WSGI_APPLICATION = 'parentroadmap.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'djdb',
+        'USER': 'djuser',
+        'PASSWORD': '123456Blm',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
